@@ -1,0 +1,33 @@
+{
+	"id": "896ef2ec-7939-149d-8a87-2aeccd7b8e82",
+	"name": "Test-learning-env",
+	"description": "",
+	"order": [
+		"b8c0ffad-e079-f053-1191-f9439977b5ec"
+	],
+	"folders": [],
+	"timestamp": 1493623867932,
+	"owner": "1459308",
+	"public": false,
+	"requests": [
+		{
+			"id": "b8c0ffad-e079-f053-1191-f9439977b5ec",
+			"headers": "Content-Type: application/json\nAuthorization: oauth 97db681c1c2d5471bfd1d89a348648a99c3c7148\n",
+			"url": "{{host}}",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '200';\n\ntests[\"Response time is less than 2000ms\"] = responseTime < 2000;\n\nvar jsonData = JSON.parse(responseBody);\n\npostman.setEnvironmentVariable(\"promocode\", jsonData.promocode);\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1493626348689,
+			"name": "{{host}}",
+			"description": "This is collection for learn more about postman and how we can right test cases on it and get data from response and send it ot other test",
+			"collectionId": "896ef2ec-7939-149d-8a87-2aeccd7b8e82",
+			"responses": [],
+			"rawModeData": "{\n   \n    \"promocode\":\"mahertest\",\n     \"user_id\":1969\n\n}"
+		}
+	]
+}
